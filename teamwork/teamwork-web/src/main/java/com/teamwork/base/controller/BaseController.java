@@ -21,8 +21,6 @@ public class BaseController {
 
     private static final String PC_FOLDER = "pc/";
     private static final String MOBILE_FOLDER = "mobile/";
-    private static final String PROPC_FOLDER = "pro/pc/";
-    private static final String PROMOBILE_FOLDER = "pro/pc/";// 兼职项目没有移动端的页面
 
     protected String redirectTo(String toUrl) {
         if (toUrl == null) {
@@ -46,14 +44,6 @@ public class BaseController {
 
     protected String mobilePageView(String viewPath) {
         return MOBILE_FOLDER + viewPath;
-    }
-
-    protected String proPcPageView(String viewPath) {
-        return PROPC_FOLDER + viewPath;
-    }
-
-    protected String proMobilePageView(String viewPath) {
-        return PROMOBILE_FOLDER + viewPath;
     }
 
     protected String encodeParam(String param, String defaultValue){
