@@ -1,4 +1,4 @@
-package com.team.account.gen;
+package com.teamwork.account.gen;
 
 import org.mybatis.generator.api.MyBatisGenerator;
 import org.mybatis.generator.config.Configuration;

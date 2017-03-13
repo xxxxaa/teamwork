@@ -1,4 +1,4 @@
-package com.teamwork.mybatis.pulin;
+package com.teamwork.mybatis.plugin;
 
 import org.mybatis.generator.api.IntrospectedTable;
 import org.mybatis.generator.api.PluginAdapter;
