@@ -1,0 +1,14 @@
+*.bak
+*.class
+*.war
+*.rar
+*.jar
+*.log
+.project
+.settings
+.classpath
+target
+
+.idea
+**/*.iml
+**/target

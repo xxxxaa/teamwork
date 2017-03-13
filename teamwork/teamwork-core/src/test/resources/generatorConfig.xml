@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="GBK" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration >
+    <!-- 驱动包配置 -->
+    <!--<context id="context1" >-->
+    <context id="DB2Tables" targetRuntime="MyBatis3">
+    <!--<context id="mysql" defaultModelType="hierarchical" targetRuntime="MyBatis3Simple" >-->
+        <!--分页插件-->
+        <plugin type="com.team.mybatis.plugin.MysqlLimitPlugin"></plugin>
+        <!-- 抑制注释的生成 -->
+        <commentGenerator>
+            <property name="suppressDate" value="true"/>
+            <property name="suppressAllComments" value="true"/>
+
+        </commentGenerator>
+
+            <!-- 数据库连接配置 -->
+
+        <!--<jdbcConnection driverClass="com.mysql.cj.jdbc.Driver" connectionURL="jdbc:mysql://127.0.0.1:3306/jbt" userId="root" password="123456" />-->
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://127.0.0.1:3306/team" userId="root" password="123456" />
+
+        <javaTypeResolver>
+            <property name="forceBigDecimals" value="true" />
+        </javaTypeResolver>
+
+
+        <!-- domain配置 -->
+
+        <javaModelGenerator targetPackage="com.team.account.model" targetProject="/www/workspace/team/team-web/src/main/java" />
+        <sqlMapGenerator targetPackage="mappers" targetProject="/www/workspace/team/team-web/src/main/resources" />
+        <!-- 生成DAO的类文件以及配置文件 -->
+        <javaClientGenerator targetPackage="com.team.account.dao" targetProject="src/main/java" type="XMLMAPPER" />
+       <!--
+        <table  tableName="category" domainObjectName="Category">
+            <property name="useActualColumnNames" value="false"/>
+        </table>
+        <table  tableName="account" domainObjectName="Account">
+            <property name="useActualColumnNames" value="false"/>
+        </table>
+        <table  tableName="product" domainObjectName="Product">
+            <property name="useActualColumnNames" value="false"/>
+        </table>
+        <table  tableName="product_category" domainObjectName="ProductCategory">
+            <property name="useActualColumnNames" value="false"/>
+        </table>
+        <table  tableName="product_image" domainObjectName="ProductImage">
+            <property name="useActualColumnNames" value="false"/>
+        </table>
+        <table  tableName="shopping_car" domainObjectName="ShoppingCar">
+            <property name="useActualColumnNames" value="false"/>
+        </table>
+        <table  tableName="address" domainObjectName="Address">
+            <property name="useActualColumnNames" value="false"/>
+
+        </table>-->
+
+        <table tableName="t_user" domainObjectName="UserModel">
+            <generatedKey column="id" sqlStatement="Mysql" identity="true" />
+        </table>
+
+        <!--<table tableName="t_loan_info" domainObjectName="LoanModel">-->
+            <!--<generatedKey column="id" sqlStatement="Mysql" identity="true" />-->
+        <!--</table>-->
+        <!--<table tableName="t_customer_detail_info" domainObjectName="CustomerDetailModel">-->
+            <!--<generatedKey column="id" sqlStatement="Mysql" identity="true" />-->
+            <!--<columnOverride column="contacts_info" property="contactsInfo"-->
+                            <!--javaType="java.util.List"-->
+                            <!--typeHandler="com.jbt.typehandler.ContactsInfoTypeHandler" />-->
+        <!--</table>-->
+        <!--<table tableName="t_customer_info" domainObjectName="CustomerModel">-->
+            <!--<generatedKey column="id" sqlStatement="Mysql" identity="true" />-->
+        <!--</table>-->
+    </context>
+</generatorConfiguration>
